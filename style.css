@@ -1,0 +1,209 @@
+/*------Universal-colors-------*/
+
+.bg-yellow {
+  background-color: #fcd232;
+}
+
+.bg-yellow-1 {
+  background-color: #ffcc02;
+}
+
+.btn-color {
+  background-color: #ff1300 !important;
+  font-weight: bold !important;
+  border-radius: 5% !important;
+}
+
+.bg-filter-fotter {
+  background-color: #302f38;
+}
+.bg-filter-fotter:hover {
+  background-color: #eb3b3b;
+}
+
+/*---Navbar----*/
+
+.logo {
+  width: 40px;
+}
+
+figcaption {
+  font-size: 10px;
+}
+
+.navbar-light .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0) !important;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: #302f38;
+  overflow-x: hidden;
+  transition: width 1s, height 1s, background-color 1s, transform 1s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 17%;
+  width: 100%;
+  text-align: center;
+}
+
+.overlay a {
+  padding: 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.5s ease-in;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  right: 45px;
+  font-size: 60px;
+}
+
+.nav-icon {
+  font-size: 45px;
+  cursor: pointer;
+  display: block;
+  text-align: left;
+  padding-right: 15px;
+}
+
+/*----Backgorund-Section-----*/
+
+.bg-img {
+  background-image: url("Images/StockSnap_8LHTBAZW32.jpg");
+  height: 63vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*---Cards-----*/
+
+.h2-color {
+  color: #302f38;
+}
+
+.card {
+  box-shadow: 0px 0px 8px -4px rgba(0, 0, 0, 1);
+  border-radius: 15px !important;
+  border: none !important;
+}
+.card-img-top {
+  border-radius: 15px 50px 0px 0px !important;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.f-size {
+  font-size: 25px;
+}
+
+.form-control {
+  padding: 28px !important;
+}
+.bt {
+  padding: 10px !important;
+  margin-top: 37px !important;
+}
+
+/* Customize the label (the container) */
+.container-1 {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 27px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container-1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  width: 50px;
+  height: 47px;
+  margin: -25px 0 2px 0;
+  background: #302f38;
+  border-radius: 100%;
+}
+
+/* On mouse-over, add a grey background color */
+.container-1:hover input ~ .checkmark {
+  background-color: #302f38;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-1 input:checked ~ .checkmark {
+  background-color: #302f38;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container-1 input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-1 .checkmark:after {
+  margin-left: 21px;
+  margin-top: 6px;
+  width: 12px;
+  height: 30px;
+  border: solid #eb3b3b;
+  border-width: 0 6px 6px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media only screen and (max-width: 600px) {
+  .card-js {
+    display: none;
+  }
+  ​ .card-js:nth-of-type(1),
+  .card-js:nth-of-type(2),
+  .card-js:nth-of-type(3) {
+    display: inline-block;
+  }
+  ​ #load-more {
+    display: block;
+  }
+}
+
+​ #load-more {
+  display: none;
+}
