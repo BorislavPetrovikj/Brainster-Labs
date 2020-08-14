@@ -19,7 +19,12 @@
 }
 .bg-filter-fotter:hover {
   background-color: #eb3b3b;
+  color: #302f38;
 }
+.bg-filter-fotter-1 {
+  background-color: #302f38;
+}
+
 
 /*---Navbar----*/
 
@@ -88,7 +93,7 @@ figcaption {
 
 .bg-img {
   background-image: url("Images/StockSnap_8LHTBAZW32.jpg");
-  height: 63vh;
+  height: 60vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -106,7 +111,8 @@ figcaption {
   border: none !important;
 }
 .card-img-top {
-  border-radius: 15px 50px 0px 0px !important;
+  border-radius: 15px 15px 0px 0px !important;
+  height:250px;
 }
 
 .card:hover {
@@ -131,7 +137,7 @@ figcaption {
   display: block;
   position: relative;
   cursor: pointer;
-  font-size: 27px;
+  font-size: 26px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -211,9 +217,41 @@ figcaption {
   #load-more {
     display: block;
   }
+  .container-1 .checkmark:after {
+    margin-left: 11px;
+    margin-top: 3px;
+    width: 14px;
+    height: 22px;
+  }
+
+  .checkmark {
+    width: 36px;
+    height: 36px;
+    margin: -1px 0px -1px 89px;
+  }
+
+  .container-1 {
+    font-size: 20px;
+  }
 }
+
 @media only screen and (max-width: 425px) {
   h1 {
     font-size: 50px !important;
+  }
+  .container-1 {
+    font-size: 17px;
+  }
+  .container-1 .checkmark:after {
+    margin-left: 11px;
+    margin-top: 3px;
+    width: 14px;
+    height: 22px;
+  }
+
+  .checkmark {
+    width: 36px;
+    height: 36px;
+    margin: -20px -10px 0px 0;
   }
 }
