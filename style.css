@@ -21,12 +21,16 @@
   background-color: #eb3b3b;
   color: #302f38;
 }
+
 .bg-filter-fotter-1 {
   background-color: #302f38;
 }
 
-
 /*---Navbar----*/
+h1,
+h2 {
+  text-shadow: 3px 0px 5px rgba(150, 150, 150, 0.95);
+}
 
 .logo {
   width: 40px;
@@ -89,11 +93,63 @@ figcaption {
   padding-right: 15px;
 }
 
+/* Grow */
+
+.nav-item {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.nav-item:hover,
+.nav-item:focus,
+.nav-item:active {
+  transform: scale(1.1);
+}
+/* pop*/
+
+@-webkit-keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+@keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+.hvr-pop {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-pop:hover,
+.hvr-pop:focus,
+.hvr-pop:active {
+  -webkit-animation-name: hvr-pop;
+  animation-name: hvr-pop;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.4s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
 /*----Backgorund-Section-----*/
 
 .bg-img {
   background-image: url("Images/StockSnap_8LHTBAZW32.jpg");
-  height: 60vh;
+  height: 56vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -106,13 +162,24 @@ figcaption {
 }
 
 .card {
-  box-shadow: 0px 0px 8px -4px rgba(0, 0, 0, 1);
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
+
   border-radius: 15px !important;
   border: none !important;
+  background-color: #112c2c;
 }
+
+
 .card-img-top {
   border-radius: 15px 15px 0px 0px !important;
-  height:250px;
+  height: 215px;
 }
 
 .card:hover {
@@ -137,11 +204,12 @@ figcaption {
   display: block;
   position: relative;
   cursor: pointer;
-  font-size: 26px;
+  font-size: 24px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  padding: 29px;
 }
 
 /* Hide the browser's default checkbox */
@@ -201,7 +269,7 @@ figcaption {
 
 @media only screen and (max-width: 768px) {
   h1 {
-    font-size: 70px !important;
+    font-size: 68px !important;
   }
   .cardjs {
     display: none;
@@ -214,24 +282,23 @@ figcaption {
   .cardjs:nth-of-type(6) {
     display: inline-block;
   }
-  #load-more {
-    display: block;
-  }
+  
   .container-1 .checkmark:after {
-    margin-left: 11px;
+    margin-left: 13px;
     margin-top: 3px;
-    width: 14px;
-    height: 22px;
+    width: 16px;
+    height: 26px;
   }
 
   .checkmark {
-    width: 36px;
-    height: 36px;
-    margin: -1px 0px -1px 89px;
+    width: 41px;
+    height: 39px;
+    margin: -17px -14px 3px 86px;
   }
 
   .container-1 {
-    font-size: 20px;
+    font-size: 29px;
+    padding: 10px 38px;
   }
 }
 
@@ -241,17 +308,38 @@ figcaption {
   }
   .container-1 {
     font-size: 17px;
+    padding: 10px;
   }
   .container-1 .checkmark:after {
-    margin-left: 11px;
+    margin-left: 7px;
     margin-top: 3px;
-    width: 14px;
-    height: 22px;
+    width: 10px;
+    height: 16px;
+    border-width: 0px 3px 3px 0;
   }
 
   .checkmark {
-    width: 36px;
-    height: 36px;
-    margin: -20px -10px 0px 0;
+    width: 24px;
+    height: 25px;
+    margin: -12px -10px 0px 0;
+  }
+  #load-more {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  h1 {
+    font-size: 43px !important;
+  }
+  .container-1 {
+    font-size: 15px;
+    padding: 5px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .container-1 {
+    font-size: 13px;
+    padding: 3px;
   }
 }
