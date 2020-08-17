@@ -151,7 +151,7 @@
 
     <div class="container-fluid text-white font-weight-bold">
       <div class="row">
-        <div
+        <div id="show-marketing-container"
           class="col-lg-4 d-flex align-items-center justify-content-between bg-filter-fotter"
         >
           <label class="container-1"
@@ -160,7 +160,7 @@
             <span class="checkmark float-right"></span>
           </label>
         </div>
-        <div
+        <div id="show-programming-container"
           class="col-lg-4 d-flex align-items-center justify-content-between bg-filter-fotter"
         >
           <label class="container-1"
@@ -169,7 +169,7 @@
             <span class="checkmark float-right"></span>
           </label>
         </div>
-        <div
+        <div id="show-design-container"
           class="col-lg-4 d-flex align-items-center justify-content-between bg-filter-fotter"
         >
           <label class="container-1"
@@ -837,11 +837,16 @@
           programmingCards.forEach(function (programmingCard) {
             programmingCard.style.display = "inline-block";
           });
+
+          document.querySelector("#show-programming-container").classList.add("red-bg")
+          document.querySelector("#show-marketing-container").classList.remove("red-bg")
+          document.querySelector("#show-design-container").classList.remove("red-bg")
         } else {
           var allCards = document.querySelectorAll(".cardjs");
           allCards.forEach(function (cardjs) {
             cardjs.style.display = "inline-block";
           });
+          removeAllBackgrounds();
         }
       }
       function showDesignCards() {
@@ -859,11 +864,16 @@
           designCards.forEach(function (designCard) {
             designCard.style.display = "inline-block";
           });
+
+          document.querySelector("#show-programming-container").classList.remove("red-bg")
+          document.querySelector("#show-marketing-container").classList.remove("red-bg")
+          document.querySelector("#show-design-container").classList.add("red-bg")
         } else {
           var allCards = document.querySelectorAll(".cardjs");
           allCards.forEach(function (cardjs) {
             cardjs.style.display = "inline-block";
           });
+          removeAllBackgrounds()
         }
       }
       function showMarketingCards() {
@@ -881,12 +891,23 @@
           designCards.forEach(function (designCard) {
             designCard.style.display = "inline-block";
           });
+
+          document.querySelector("#show-programming-container").classList.remove("red-bg")
+          document.querySelector("#show-marketing-container").classList.add("red-bg")
+          document.querySelector("#show-design-container").classList.remove("red-bg")
         } else {
           var allCards = document.querySelectorAll(".cardjs");
           allCards.forEach(function (cardjs) {
             cardjs.style.display = "inline-block";
           });
+          removeAllBackgrounds()
         }
+      }
+
+      function removeAllBackgrounds() {
+        document.querySelector("#show-programming-container").classList.remove("red-bg")
+          document.querySelector("#show-marketing-container").classList.remove("red-bg")
+          document.querySelector("#show-design-container").classList.remove("red-bg")
       }
       // Tuka nadolu e kodot za load-more kopceto
       document
