@@ -190,7 +190,7 @@ figcaption {
 }
 
 .form-control {
-  padding: 28px !important;
+  height: 60px !important;
 }
 .bt {
   padding: 10px !important;
@@ -363,4 +363,8 @@ figcaption {
   .f-size {
     font-size: 33px !important;
   }
+}
+
+.red-bg {
+  background-color: #eb3b3b;
 }
