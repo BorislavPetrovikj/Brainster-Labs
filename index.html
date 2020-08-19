@@ -3,8 +3,8 @@
   <head>
     <title>Brainster Labs</title>
     <meta charset="utf-8" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
+    <meta name="description" content="Academy Project" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
     <meta name="author" content="Borislav Petrovic" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <link rel="icon" type="image/png" href="Images/logo.png" sizes="196x196" />
@@ -67,14 +67,13 @@
             class="nav-link text-white pl-4"
             href="http://codepreneurs.co/"
             target="_blank"
-            >Академија За data data science
-            <span class="sr-only">(current)</span></a
+            >Академија За Data science <span class="sr-only">(current)</span></a
           >
           <a
             class="nav-link text-white pl-4"
             href="https://design.brainster.co/"
             target="_blank"
-            >Академија За дизајн <span class="sr-only">(current)</span></a
+            >Академија За Дизајн <span class="sr-only">(current)</span></a
           >
 
           <a href="Vraboti-Student.html" target="_blank"
@@ -135,7 +134,7 @@
       </div>
     </nav>
 
-    <!------Backgorund-Section------>
+    <!------Background-Section------>
 
     <div class="container-fluid bg-img">
       <div class="row h-100 align-items-center opacity">
@@ -151,7 +150,8 @@
 
     <div class="container-fluid text-white font-weight-bold">
       <div class="row">
-        <div id="show-marketing-container"
+        <div
+          id="show-marketing-container"
           class="col-lg-4 d-flex align-items-center justify-content-between bg-filter-fotter"
         >
           <label class="container-1"
@@ -160,7 +160,8 @@
             <span class="checkmark float-right"></span>
           </label>
         </div>
-        <div id="show-programming-container"
+        <div
+          id="show-programming-container"
           class="col-lg-4 d-flex align-items-center justify-content-between bg-filter-fotter"
         >
           <label class="container-1"
@@ -169,7 +170,8 @@
             <span class="checkmark float-right"></span>
           </label>
         </div>
-        <div id="show-design-container"
+        <div
+          id="show-design-container"
           class="col-lg-4 d-flex align-items-center justify-content-between bg-filter-fotter"
         >
           <label class="container-1"
@@ -181,15 +183,13 @@
       </div>
     </div>
 
-    <!------Card-Section------>
+    <!------Cards-Section------>
 
     <div class="container-fluid bg-yellow pb-5">
       <h2 class="display-4 h2-color text-center font-weight-bold py-5">
         Проекти
       </h2>
       <div class="container">
-        <!------Marketing-cards------>
-
         <div class="row">
           <div
             class="col-lg-4 col-md-6 col-12 mb-md-0 mb-4 marketing cardjs pb-0 pb-sm-4"
@@ -370,10 +370,6 @@
               </div>
             </div>
           </div>
-
-          <!------------------->
-
-          <!------Programming-cards------>
 
           <div
             class="col-lg-4 col-md-6 col-12 mb-md-0 mb-4 programming cardjs pb-0 pb-sm-4"
@@ -793,7 +789,7 @@
         <button
           type="button"
           id="load-more"
-          class="btn btn-danger btn-lg btn-block mt-4"
+          class="btn btn-color btn-lg btn-block text-white mt-4"
         >
           Load more
         </button>
@@ -823,24 +819,28 @@
         .querySelector("#show-marketing")
         .addEventListener("change", showMarketingCards);
       function showProgrammingCards() {
-        //odcheckiraj gi drugite checkboxovi
         document.querySelector("#show-design").checked = false;
         document.querySelector("#show-marketing").checked = false;
-        //Skrij gi site karticki
+
         var allCards = document.querySelectorAll(".cardjs");
         allCards.forEach(function (cardjs) {
           cardjs.style.display = "none";
         });
         if (document.querySelector("#show-programming").checked) {
-          //Pokazi gi site so klasa programming
           var programmingCards = document.querySelectorAll(".programming");
           programmingCards.forEach(function (programmingCard) {
             programmingCard.style.display = "inline-block";
           });
 
-          document.querySelector("#show-programming-container").classList.add("red-bg")
-          document.querySelector("#show-marketing-container").classList.remove("red-bg")
-          document.querySelector("#show-design-container").classList.remove("red-bg")
+          document
+            .querySelector("#show-programming-container")
+            .classList.add("red-bg");
+          document
+            .querySelector("#show-marketing-container")
+            .classList.remove("red-bg");
+          document
+            .querySelector("#show-design-container")
+            .classList.remove("red-bg");
         } else {
           var allCards = document.querySelectorAll(".cardjs");
           allCards.forEach(function (cardjs) {
@@ -850,66 +850,80 @@
         }
       }
       function showDesignCards() {
-        //odcheckiraj gi drugite checkboxovi
         document.querySelector("#show-programming").checked = false;
         document.querySelector("#show-marketing").checked = false;
-        //Skrij gi site karticki
+
         var allCards = document.querySelectorAll(".cardjs");
         allCards.forEach(function (cardjs) {
           cardjs.style.display = "none";
         });
         if (document.querySelector("#show-design").checked) {
-          //Pokazi gi site so klasa design
           var designCards = document.querySelectorAll(".design");
           designCards.forEach(function (designCard) {
             designCard.style.display = "inline-block";
           });
 
-          document.querySelector("#show-programming-container").classList.remove("red-bg")
-          document.querySelector("#show-marketing-container").classList.remove("red-bg")
-          document.querySelector("#show-design-container").classList.add("red-bg")
+          document
+            .querySelector("#show-programming-container")
+            .classList.remove("red-bg");
+          document
+            .querySelector("#show-marketing-container")
+            .classList.remove("red-bg");
+          document
+            .querySelector("#show-design-container")
+            .classList.add("red-bg");
         } else {
           var allCards = document.querySelectorAll(".cardjs");
           allCards.forEach(function (cardjs) {
             cardjs.style.display = "inline-block";
           });
-          removeAllBackgrounds()
+          removeAllBackgrounds();
         }
       }
       function showMarketingCards() {
-        //odcheckiraj gi drugite checkboxovi
         document.querySelector("#show-design").checked = false;
         document.querySelector("#show-programming").checked = false;
-        //Skrij gi site karticki
+
         var allCards = document.querySelectorAll(".cardjs");
         allCards.forEach(function (cardjs) {
           cardjs.style.display = "none";
         });
         if (document.querySelector("#show-marketing").checked) {
-          //Pokazi gi site so klasa marketing
           var designCards = document.querySelectorAll(".marketing");
           designCards.forEach(function (designCard) {
             designCard.style.display = "inline-block";
           });
 
-          document.querySelector("#show-programming-container").classList.remove("red-bg")
-          document.querySelector("#show-marketing-container").classList.add("red-bg")
-          document.querySelector("#show-design-container").classList.remove("red-bg")
+          document
+            .querySelector("#show-programming-container")
+            .classList.remove("red-bg");
+          document
+            .querySelector("#show-marketing-container")
+            .classList.add("red-bg");
+          document
+            .querySelector("#show-design-container")
+            .classList.remove("red-bg");
         } else {
           var allCards = document.querySelectorAll(".cardjs");
           allCards.forEach(function (cardjs) {
             cardjs.style.display = "inline-block";
           });
-          removeAllBackgrounds()
+          removeAllBackgrounds();
         }
       }
 
       function removeAllBackgrounds() {
-        document.querySelector("#show-programming-container").classList.remove("red-bg")
-          document.querySelector("#show-marketing-container").classList.remove("red-bg")
-          document.querySelector("#show-design-container").classList.remove("red-bg")
+        document
+          .querySelector("#show-programming-container")
+          .classList.remove("red-bg");
+        document
+          .querySelector("#show-marketing-container")
+          .classList.remove("red-bg");
+        document
+          .querySelector("#show-design-container")
+          .classList.remove("red-bg");
       }
-      // Tuka nadolu e kodot za load-more kopceto
+
       document
         .querySelector("#load-more")
         .addEventListener("click", loadMoreCards);
@@ -925,7 +939,7 @@
             }
           }
         });
-        //Ako site karticki se prikazani, trgni go load-more kopceto
+
         var allCards = document.querySelectorAll(".cardjs");
         var numberOfHiddenCards = 0;
         allCards.forEach(function (cardjs) {
