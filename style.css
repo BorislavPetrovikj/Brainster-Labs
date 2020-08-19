@@ -1,4 +1,4 @@
-/*------Universal-colors-------*/
+/*-- Universal-colors --*/
 
 .bg-yellow {
   background-color: #fcd232;
@@ -31,7 +31,7 @@
   background-color: #eb3b3b;
 }
 
-/*---Navbar----*/
+/*-- Navbar --*/
 
 h1,
 h2 {
@@ -152,7 +152,7 @@ figcaption {
   animation-iteration-count: 1;
 }
 
-/*----Background-Section-----*/
+/*-- Background-Section --*/
 
 .bg-img {
   background-image: url("Images/StockSnap_8LHTBAZW32.jpg");
@@ -162,7 +162,7 @@ figcaption {
   background-size: cover;
 }
 
-/*---Cards-----*/
+/*-- Cards --*/
 
 .h2-color {
   color: #302f38;
@@ -266,7 +266,7 @@ figcaption {
   display: none;
 }
 
-/* Vraboti-Student-html*/
+/*-- Vraboti-Student-html --*/
 
 .bg-padding {
   padding: 107px 0px;
@@ -275,7 +275,7 @@ figcaption {
   padding-bottom: 173px;
 }
 
-/* Media-Queries*/
+/*-- Media Queries --*/
 
 @media only screen and (max-width: 768px) {
   h1 {
